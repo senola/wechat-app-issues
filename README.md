@@ -19,7 +19,7 @@
 - 14、微信调试神器，ngrok，见[ngrok](https://www.twindy.org/nginx-ngrock-net-through/)
 - 15、view 添加点击效果[需要开启hover效果]： 
 
-````
+````html
 <view hover hover-class="item-hover"> 
 ```
 
