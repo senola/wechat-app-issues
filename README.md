@@ -17,6 +17,7 @@
 - 12、wx.setStorage(OBJECT) 【目前每个小程序限制5M】
 - 13、数据监控【微信后台：事实访问次数/昨日概况/累计访问用户数/TOP受访页】
 - 14、微信调试神器，ngrok，见[ngrok](https://www.twindy.org/nginx-ngrock-net-through/)
+- 15、view 添加点击效果[需要开启hover效果]： <view hover hover-class="item-hover"> 
 
 #### 小程序开发前相关配置
 
