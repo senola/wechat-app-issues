@@ -33,8 +33,8 @@
     method: "POST",
     dataType: "json",
     header: {
-      'content-type': 'application/x-www-form-urlencoded', //==> 此处若为application/json则服务端无法获取POST的参数
-    POST},
+      'content-type': 'application/x-www-form-urlencoded' //==> 此处若为application/json则服务端无法获取POST的参数
+    }
 ```
 #### 小程序开发前相关配置
 
