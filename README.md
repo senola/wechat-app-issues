@@ -26,7 +26,16 @@
 - 17、安卓手机上小程序第一次加载时候首页时候， onshow方法会莫名其妙加载两遍，而同样在iphone下却不会，由于需要在onshow里面触发获取用户信息，所以系统加载两次onshow会导致后台报错。。。
 - 18、禁止页面下拉： 设置 "disableScroll": true 。
 - 19、安卓下会出现getAppConfig:fail，无法获取userInfo。微信问题，下载最新的微信安装包
-
+- 20、后台不能接受POST数据，但是可以接收GET请求参数
+```json
+    url: url,
+    data: data,
+    method: "POST",
+    dataType: "json",
+    header: {
+      'content-type': 'application/x-www-form-urlencoded', //==> 此处若为application/json则服务端无法获取POST的参数
+    POST},
+```
 #### 小程序开发前相关配置
 
 - 1、登录--->管理员扫二维码-->设置-->开发设置-->生成AppSecrect
