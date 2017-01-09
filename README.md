@@ -18,16 +18,14 @@
 - 13、数据监控【微信后台：事实访问次数/昨日概况/累计访问用户数/TOP受访页】
 - 14、微信调试神器，ngrok，见[ngrok](https://www.twindy.org/nginx-ngrock-net-through/)
 - 15、view 添加点击效果[需要开启hover效果]： 
-- 18、禁止页面下拉： 设置 "disableScroll": true 。
-- 19、安卓下会出现getAppConfig:fail，无法获取userInfo。微信问题，下载最新的微信安装包
 ````html
 <view hover hover-class="item-hover"> 
 ```
 
 - 16、用户授权调试方法【开发工具-》清除手机授权数据 (缓存-清除手机授权数据) 】
 - 17、安卓手机上小程序第一次加载时候首页时候， onshow方法会莫名其妙加载两遍，而同样在iphone下却不会，由于需要在onshow里面触发获取用户信息，所以系统加载两次onshow会导致后台报错。。。
-
-
+- 18、禁止页面下拉： 设置 "disableScroll": true 。
+- 19、安卓下会出现getAppConfig:fail，无法获取userInfo。微信问题，下载最新的微信安装包
 
 #### 小程序开发前相关配置
 
