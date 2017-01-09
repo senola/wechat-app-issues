@@ -18,7 +18,8 @@
 - 13、数据监控【微信后台：事实访问次数/昨日概况/累计访问用户数/TOP受访页】
 - 14、微信调试神器，ngrok，见[ngrok](https://www.twindy.org/nginx-ngrock-net-through/)
 - 15、view 添加点击效果[需要开启hover效果]： 
-
+- 18、禁止页面下拉： 设置 "disableScroll": true 。
+- 19、安卓下会出现getAppConfig:fail，无法获取userInfo。微信问题，下载最新的微信安装包
 ````html
 <view hover hover-class="item-hover"> 
 ```
@@ -68,5 +69,12 @@
 - 18、小程序的页面内容中，不能存在测试类内容；示例：算命，抽签，星座运势等。
 
 [其他微信小程序平台常见拒绝情形](https://developers.weixin.qq.com/blogdetail?action=get_post_info&lang=zh_CN&token=1592986236&docid=c53fb90c11590a1b86c109b4006fae27)
+
+#### 文档及社区
+- 1、[官方文档](https://mp.weixin.qq.com/debug/wxadoc/dev/index.html?t=201715)
+- 2、[官方Q&A](https://mp.weixin.qq.com/debug/wxadoc/dev/qa.html?t=201715)
+- 3、[官方社区](https://developers.weixin.qq.com)
+- 4、[小程序接入指南](https://developers.weixin.qq.com/blogdetail?action=get_post_info&lang=zh_CN&token=1592986236&docid=bb39a3dfd5f9c7070f9e2ec3c0f7f68a)
+- 5、[小程序常见FAQ](https://developers.weixin.qq.com/blogdetail?action=get_post_info&lang=zh_CN&token=1592986236&docid=2fcdb7794d48c59f7624f53e94d0ae22)
 
 #### 持续踩坑中...
