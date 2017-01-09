@@ -84,4 +84,4 @@
 - 4、[小程序接入指南](https://developers.weixin.qq.com/blogdetail?action=get_post_info&lang=zh_CN&token=1592986236&docid=bb39a3dfd5f9c7070f9e2ec3c0f7f68a)
 - 5、[小程序常见FAQ](https://developers.weixin.qq.com/blogdetail?action=get_post_info&lang=zh_CN&token=1592986236&docid=2fcdb7794d48c59f7624f53e94d0ae22)
 
-#### 持续踩坑中...
+#### 持续踩坑中（2017-01-09）
