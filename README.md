@@ -1,4 +1,4 @@
-### webchat-applet
+### webchat-app-issues
 
 早就知道小程序这个坑很深，一个多月的实践发现坑果然名不虚传...       
 
