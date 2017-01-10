@@ -31,6 +31,7 @@
 - 18、禁止页面下拉： 设置 "disableScroll": true 。
 - 19、安卓下会出现getAppConfig:fail，无法获取userInfo。微信问题，下载最新的微信安装包
 - 20、后台不能接受POST数据，但是可以接收GET请求参数
+
 ```json
     url: url,
     data: data,
@@ -40,6 +41,9 @@
       'content-type': 'application/x-www-form-urlencoded' //==> 此处若为application/json则服务端无法获取POST的参数
     }
 ```
+
+- 21、小程序第一次启动用户拒绝授权后，下一次无法唤起授权弹框，默认记住上一次用户的选择。暂时没有找到解决方法，微信也没有相关解析。【2017-01-10】
+
 #### 小程序开发前相关配置
 
 - 1、登录--->管理员扫二维码-->设置-->开发设置-->生成AppSecrect
