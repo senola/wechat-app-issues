@@ -85,14 +85,14 @@
 
 [其他微信小程序平台常见拒绝情形](https://developers.weixin.qq.com/blogdetail?action=get_post_info&lang=zh_CN&token=1592986236&docid=c53fb90c11590a1b86c109b4006fae27)
 
-#### 文档及社区
+#### 五、文档及社区
 - 1、[官方文档](https://mp.weixin.qq.com/debug/wxadoc/dev/index.html?t=201715)
 - 2、[官方Q&A](https://mp.weixin.qq.com/debug/wxadoc/dev/qa.html?t=201715)
 - 3、[官方社区](https://developers.weixin.qq.com)
 - 4、[小程序接入指南](https://developers.weixin.qq.com/blogdetail?action=get_post_info&lang=zh_CN&token=1592986236&docid=bb39a3dfd5f9c7070f9e2ec3c0f7f68a)
 - 5、[小程序常见FAQ](https://developers.weixin.qq.com/blogdetail?action=get_post_info&lang=zh_CN&token=1592986236&docid=2fcdb7794d48c59f7624f53e94d0ae22)
 
-#### 五、code
+#### 六、code
 
 - 1、封装微信发起请求接口,登录失效默认自动发起登录请求
 
@@ -217,4 +217,4 @@ function requestLogin(callback) {
 }
 ```
 
-#### 六、持续踩坑中...（2017-01-11）
+#### 七、持续踩坑中...（2017-01-11）
