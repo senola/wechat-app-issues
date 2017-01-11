@@ -92,4 +92,128 @@
 - 4、[小程序接入指南](https://developers.weixin.qq.com/blogdetail?action=get_post_info&lang=zh_CN&token=1592986236&docid=bb39a3dfd5f9c7070f9e2ec3c0f7f68a)
 - 5、[小程序常见FAQ](https://developers.weixin.qq.com/blogdetail?action=get_post_info&lang=zh_CN&token=1592986236&docid=2fcdb7794d48c59f7624f53e94d0ae22)
 
-#### 持续踩坑中（2017-01-09）
+#### code
+
+- 1、封装微信发起请求接口,登录失效默认自动发起登录请求
+
+```js
+/**
+ * 发起的是 HTTPS 请求
+ * @pram url: 请求地址,协议必须为https
+ * @pram data 请求参数请求参数
+ * @param success 请求成功回调
+ * @param fail 请求失败回调
+ * @param complete 请求完成（成功或者失败）回调
+ */
+function request(url, data, success, fail, complete) {
+  var _url = url,
+      _data = data,
+      _success = success,
+      _fail = fail, 
+      _complete = complete;
+
+  wx.request({
+    url: url,
+    data: data,
+    method: "POST",
+    dataType: "json",
+    header: {
+      'content-type': 'application/x-www-form-urlencoded',
+      'Client-Agent': getSystemInfo(),
+      'WX-SESSION-ID': wx.getStorageSync(constant['WX-SESSION-ID']) //每次请求带上登录标志
+    },
+    success: function(res) {
+      if(res.data.code == "-9999") { //会话失效重新登录
+        requestLogin(function(){
+          constant['NUM_TRY_LOGIN'] ++;
+          //设置请求上限，防止重复提交并死循环
+          if(constant['NUM_TRY_LOGIN'] < constant['LIMIT_NUM_TRY_LOGIN']) {
+            request(_url, _data, _success, _fail, _complete);
+          }
+        });
+        return;
+      }
+      if(res.data.code == "0") {
+         if(typeof _success == "function") {
+           _success(res.data);
+         }
+      } else {
+         wx.showToast({title: res.data.msg, icon: 'loading', duration: 2000});
+         return;
+      }
+    },
+    fail: function(res) {
+      if(typeof _fail == "function") {
+        _fail(res);
+      }
+      if(typeof _fail == "string") { //请求失败的弹框提示
+        wx.showToast({title: _fail, icon: 'loading', duration: 2000});
+      }
+    },
+    complete: function(res) {
+      if(typeof _complete == "function") {
+        _complete(res);
+      }
+    }
+  });
+}
+```
+- 2、请求登录接口
+
+```js
+/**
+ * 请求登录,获取用户相关信息
+ * @param callback
+ */
+function requestLogin(callback) {
+  var _callback = callback;
+  wx.login({
+      success: function (event) {
+        // 获取到请求码，继续请求用户的基本信息
+        if(event.code) {
+          var code = event.code;
+          wx.getUserInfo({
+              success: function (res) {
+                var data = {
+                  code: code,
+                  encryptedData: res.encryptedData,
+                  iv: res.iv,
+                  signature: res.signature,
+                  rawData: res.rawData
+                }
+                var url = domain + "/wx_xxx"; //请求登录地址
+                request(url, data, 
+                  function(res){ //success
+                    if(res.code == "0") {
+                       //此处可以将服务端返回的登录状态保存起来
+                       wx.setStorageSync(constant['WX-SESSION-ID'], res.object.sessionId);
+                       if(typeof _callback == "function") {
+                         _callback();
+                       }
+                    }
+                  },
+                  function(res){ //fail
+                    wx.showToast({title: '请求登录失败',icon: 'loading', duration: 2000});
+                  }
+                );
+              },
+              fail: function(res) {
+                //用户拒绝授权
+                if(res.errMsg == "getUserInfo:cancel" || res.errMsg == "getUserInfo:fail auth deny") { 
+                  wx.redirectTo({ //跳转至未授权页面
+                    url: '../xxx-page/xxx-page'
+                  });
+                }
+              }
+          })
+        } else {
+          wx.showToast({title: '微信登录失败',icon: 'loading', duration: 2000});
+        }
+      },
+      fail: function(res) {
+        wx.showToast({title: '微信登陆失败！',icon: 'loading', duration: 2000});
+      }
+  });
+}
+```
+#### 持续踩坑中（2017-01-11）
