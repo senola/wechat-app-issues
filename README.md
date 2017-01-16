@@ -49,6 +49,7 @@
 ![error](https://cloud.githubusercontent.com/assets/6022948/21841292/940f4d50-d81c-11e6-96ac-76fdb4cc274a.png)
 
 - 23、 微信后台更新了request合法域名，可以直接去微信开发工具-->项目-->配置信息-->刷新，立马生效。
+- 24、 小程序官方没有提供java版登录信息解密示例，可以用这个demo [java版解密demo](https://github.com/cocoli/springboot-weapp-demo)
 
 #### 二、小程序开发前相关配置
 
@@ -224,4 +225,4 @@ function requestLogin(callback) {
 }
 ```
 
-#### 七、持续踩坑中...（2017-01-11）
+#### 七、持续踩坑中...（2017-01-16）
