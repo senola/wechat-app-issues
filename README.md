@@ -50,6 +50,9 @@
 
 - 23、 微信后台更新了request合法域名，可以直接去微信开发工具-->项目-->配置信息-->刷新，立马生效。
 - 24、 小程序官方没有提供java版登录信息解密示例，可以用这个demo [java版解密demo](https://github.com/cocoli/springboot-weapp-demo)
+- 25、 使用wx:for遍历的时候最好加上wx:key="{{item.id}}"，如果明确知道该列表是静态，或者不必关注其顺序，可以选择忽略，但是如果遍历的数组会发生改变，则有可能导致数据顺序会改变。
+
+![wx-key](https://cloud.githubusercontent.com/assets/6022948/21972416/59402f42-dbf4-11e6-85c0-e369fc1e0bfd.png)
 
 #### 二、小程序开发前相关配置
 
