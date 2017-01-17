@@ -20,7 +20,7 @@
 - 11、已用 https，但报无法建立与该服务器的安全连接是什么情况【需要 nginx 配置一下 https 的加密标准为tls1.2及以上】
 - 12、wx.setStorage(OBJECT) 【目前每个小程序限制5M】
 - 13、数据监控【微信后台：事实访问次数/昨日概况/累计访问用户数/TOP受访页】
-- 14、微信调试神器，ngrok，见[ngrok](https://www.twindy.org/nginx-ngrock-net-through/)
+- 14、微信调试神器，ngrok，见 <a href="https://www.twindy.org/nginx-ngrock-net-through/" target="_blank">ngrok</a>
 - 15、view 添加点击效果[需要开启hover效果]： 
 ````html
 <view hover hover-class="item-hover"> 
@@ -49,10 +49,12 @@
 ![error](https://cloud.githubusercontent.com/assets/6022948/21841292/940f4d50-d81c-11e6-96ac-76fdb4cc274a.png)
 
 - 23、 微信后台更新了request合法域名，可以直接去微信开发工具-->项目-->配置信息-->刷新，立马生效。
-- 24、 小程序官方没有提供java版登录信息解密示例，可以用这个demo [java版解密demo](https://github.com/cocoli/springboot-weapp-demo)
+- 24、 小程序官方没有提供java版登录信息解密示例，可以用这个demo <a href="https://github.com/cocoli/springboot-weapp-demo" target="_blank">java版解密demo</a> 
 - 25、 使用wx:for遍历的时候最好加上wx:key="{{item.id}}"，如果明确知道该列表是静态，或者不必关注其顺序，可以选择忽略，但是如果遍历的数组会发生改变，则有可能导致数据顺序会改变。
 
 ![wx-key](https://cloud.githubusercontent.com/assets/6022948/21972416/59402f42-dbf4-11e6-85c0-e369fc1e0bfd.png)
+
+- 26、小程序开发页面便利之处在于rpx, 所以设计稿建议用iphone6尺寸。flex布局可以参考<a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank">这篇</a>
 
 #### 二、小程序开发前相关配置
 
