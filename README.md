@@ -22,7 +22,6 @@
 - 13、数据监控【微信后台：事实访问次数/昨日概况/累计访问用户数/TOP受访页】
 - 14、微信调试神器，ngrok，见 <a href="https://www.twindy.org/nginx-ngrock-net-through/" target="_blank">ngrok</a>
 - 15、view 添加点击效果[需要开启hover效果]： 
-
 ````html
 <view hover hover-class="item-hover"> 
 ```
@@ -231,4 +230,4 @@ function requestLogin(callback) {
 }
 ```
 
-#### 七、持续踩坑中...（2017-03-06）
+#### 七、持续踩坑中...（2017-01-16）
