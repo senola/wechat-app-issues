@@ -1,6 +1,6 @@
 ### webchat-app-issues
 
-早就知道小程序这个坑很深，一个多月的实践发现这个坑果然名不虚传...       
+早就知道小程序这个坑很深，一个多月的实践发现这个坑果然名不虚传...      
 
 不过，开发的小程序如期上线了，还是值得庆贺！！！呵呵，记录一下那些让自己停顿的点。
 
@@ -21,10 +21,10 @@
 - 12、wx.setStorage(OBJECT) 【目前每个小程序限制5M】
 - 13、数据监控【微信后台：事实访问次数/昨日概况/累计访问用户数/TOP受访页】
 - 14、微信调试神器，ngrok，见 <a href="https://www.twindy.org/nginx-ngrock-net-through/" target="_blank">ngrok</a>
-- 15、view 添加点击效果[需要开启hover效果]： 
+- 15、view 添加点击效果[需要开启hover效果]：
 
 ````html
-<view hover hover-class="item-hover"> 
+<view hover hover-class="item-hover">
 ```
 
 - 16、用户授权调试方法【开发工具-》清除手机授权数据 (缓存-清除手机授权数据) 】
@@ -50,7 +50,7 @@
 ![error](https://cloud.githubusercontent.com/assets/6022948/21841292/940f4d50-d81c-11e6-96ac-76fdb4cc274a.png)
 
 - 23、 微信后台更新了request合法域名，可以直接去微信开发工具-->项目-->配置信息-->刷新，立马生效。
-- 24、 小程序官方没有提供java版登录信息解密示例，可以用这个demo <a href="https://github.com/cocoli/springboot-weapp-demo" target="_blank">java版解密demo</a> 
+- 24、 小程序官方没有提供java版登录信息解密示例，可以用这个demo <a href="https://github.com/cocoli/springboot-weapp-demo" target="_blank">java版解密demo</a>
 - 25、 使用wx:for遍历的时候最好加上wx:key="{{item.id}}"，如果明确知道该列表是静态，或者不必关注其顺序，可以选择忽略，但是如果遍历的数组会发生改变，则有可能导致数据顺序会改变。
 
 ![wx-key](https://cloud.githubusercontent.com/assets/6022948/21972416/59402f42-dbf4-11e6-85c0-e369fc1e0bfd.png)
@@ -66,7 +66,7 @@
    用户身份-->开发者-->二维码  开发者最多10人
 - 4、绑定体验者
    用户身份-->体验者-->二维码扫描 体验者20人
-   
+
 
 #### 三、小程序发布
 
@@ -123,7 +123,7 @@ function request(url, data, success, fail, complete) {
   var _url = url,
       _data = data,
       _success = success,
-      _fail = fail, 
+      _fail = fail,
       _complete = complete;
 
   wx.request({
@@ -196,7 +196,7 @@ function requestLogin(callback) {
                   rawData: res.rawData
                 }
                 var url = domain + "/wx_xxx"; //请求登录地址
-                request(url, data, 
+                request(url, data,
                   function(res){ //success
                     if(res.code == "0") {
                        //此处可以将服务端返回的登录状态保存起来
@@ -213,7 +213,7 @@ function requestLogin(callback) {
               },
               fail: function(res) {
                 //用户拒绝授权
-                if(res.errMsg == "getUserInfo:cancel" || res.errMsg == "getUserInfo:fail auth deny") { 
+                if(res.errMsg == "getUserInfo:cancel" || res.errMsg == "getUserInfo:fail auth deny") {
                   wx.redirectTo({ //跳转至未授权页面
                     url: '../xxx-page/xxx-page'
                   });
@@ -232,3 +232,5 @@ function requestLogin(callback) {
 ```
 
 #### 七、持续踩坑中...（2017-03-06）
+
+![七牛云](http://assets.qiniu.com/v2/qiniu-409x220.png)
