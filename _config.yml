@@ -1,1 +1,4 @@
 theme: jekyll-theme-cayman
+github.is_project_page:false
+title: [wechat-app-issues]
+description: [微信小程序踩坑集合]
