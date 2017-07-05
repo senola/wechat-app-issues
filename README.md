@@ -43,6 +43,7 @@
 ```
 
 - 21、小程序第一次启动用户拒绝授权后，下一次无法唤起授权弹框，默认记住上一次用户的选择。暂时没有找到解决方法，微信也没有相关解析。【2017-01-10】
+    微信更新了api（wx.authorize(OBJECT)）,支持唤起授权弹框【2017-07-05】
 - 22、跳转到有tabbar的页面一定要用 wx.switchTab().这个在各个群里几乎每天都有人问到！！！
 - 22、绑定开发者/体验者时记得去手机上确认邀请。（超多人问）
 
@@ -55,6 +56,7 @@
 ![wx-key](https://cloud.githubusercontent.com/assets/6022948/21972416/59402f42-dbf4-11e6-85c0-e369fc1e0bfd.png)
 
 - 26、小程序开发页面便利之处在于rpx, 所以设计稿建议用iphone6尺寸。flex布局可以参考<a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank">这篇</a>
+- 27、微信小程序的会默认监听文件变化，然后自动刷新。但不足的是每次都是全量刷新，而不是模块的热替换，反而会影响开发速度，尤其对于喜欢频繁Command + S的开发者，你会发现你的小程序在不断的刷新。[@MinJieLiu](https://github.com/MinJieLiu)
 
 #### 二、小程序开发前相关配置
 
