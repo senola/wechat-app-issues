@@ -57,9 +57,11 @@
 
 - 26、小程序开发页面便利之处在于rpx, 所以设计稿建议用iphone6尺寸。flex布局可以参考<a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank">这篇</a>
 - 27、微信小程序的会默认监听文件变化，然后自动刷新。但不足的是每次都是全量刷新，而不是模块的热替换，反而会影响开发速度，尤其对于喜欢频繁Command + S的开发者，你会发现你的小程序在不断的刷新。[@MinJieLiu](https://github.com/MinJieLiu)
-- 28、微信小程序自 基础库 `1.6.4 `开始支持了`web-view`组件，即在小程序支持了嵌入网页的能力，但是使用的时候发现在开发者工具中不能显示网页，手机预览却可以。原因是所使用的基础库不支持`web-view`组件，可通过选择最新的基础库解决。如下：
+- 28、微信小程序自 基础库 `1.6.4 `开始支持了`web-view`组件，即在小程序支持了嵌入网页的能力，但是使用的时候发现在开发者工具中不能显示网页，手机预览却可以【升级微信客户端最新版本】。原因是所使用的基础库不支持`web-view`组件，可通过选择最新的基础库解决。如下：
 
 ![image](https://user-images.githubusercontent.com/6022948/34928298-8a259daa-f9f7-11e7-8c85-f2d661937f6c.png)
+
+- 29、 不支持H5和小程序通信，不能通过本地存储之类的手段打通， 如果硬是需要携带参数，可以尝试在`web-view` url 中携带，但是不推荐，H5可以使用公众号授权。web-view开放的能力（网页需嵌入jssdk）： [<web-view/>网页中支持的JSSDK接口](https://mp.weixin.qq.com/debug/wxadoc/dev/component/web-view.html)：
 
 #### 二、小程序开发前相关配置
 
