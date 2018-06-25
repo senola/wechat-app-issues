@@ -63,6 +63,9 @@
 
 - 29、 不支持H5和小程序通信，不能通过本地存储之类的手段打通， 如果硬是需要携带参数，可以尝试在`web-view` url 中携带，但是不推荐，H5可以使用公众号授权。web-view开放的能力（网页需嵌入jssdk）： [<web-view/>网页中支持的JSSDK接口](https://mp.weixin.qq.com/debug/wxadoc/dev/component/web-view.html)：
 - 30、web-view 目前不支持微信支付
+- 31、小程序中`try...catch`语句中`catch`部分使用`throw`抛出错误在更外层的`try...catch`无法捕获到
+
+![error](https://user-images.githubusercontent.com/20406631/41845039-ab9cbb0e-78a4-11e8-9fc4-8a207a6d11d5.png)
 
 #### 二、小程序开发前相关配置
 
