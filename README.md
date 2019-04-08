@@ -1,4 +1,4 @@
-### webchat-app-issues
+### wechat-app-issues
 
 早就知道小程序这个坑很深，一个多月的实践发现这个坑果然名不虚传...       
 
